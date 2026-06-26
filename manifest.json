@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Extension for Coddy",
+  "version": "1.0.0",
+  "description": "Automates coding practice by reading questions, asking local AI, and clicking the correct answer.",
+  "permissions": ["activeTab", "storage", "scripting", "tabs"],
+  "host_permissions": [
+    "http://localhost:5000/*",
+    "http://127.0.0.1:5000/*",
+    "http://localhost:11434/*",
+    "http://127.0.0.1:11434/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Extension for Coddy"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding Practice Automator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Extension for Coddy</h1>
+      <p id="status" class="status stopped">Stopped</p>
+    </header>
+
+    <div class="buttons">
+      <button id="start-btn" class="btn start">Start</button>
+      <button id="stop-btn" class="btn stop" disabled>Stop</button>
+      <button id="view-btn" class="btn view">View</button>
+    </div>
+
+    <p class="hint">Open your coding practice site, then click Start. Requires Ollama + AI server.</p>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
